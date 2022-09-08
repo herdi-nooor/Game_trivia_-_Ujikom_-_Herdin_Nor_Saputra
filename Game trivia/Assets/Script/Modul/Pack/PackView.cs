@@ -7,7 +7,9 @@ namespace GameTrivia.Modul.Pack
 {
     public class PackView : MonoBehaviour
     {
-        private Button _backButton;
+        [SerializeField]private Button _backButton;
+        [SerializeField]public GameObject buttonWrap;
+        
     }
 
 }

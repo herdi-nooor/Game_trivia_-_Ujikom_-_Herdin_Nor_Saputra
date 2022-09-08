@@ -10,8 +10,9 @@ namespace GameTrivia.Modul.Level {
         public void LoadLevelList()
         {
             string levelid = "LevelA1";
-            DatabaseController.Instance.GetLevelData(levelid);
-            Debug.Log(DatabaseController.Instance.GetLevelData(levelid));
+
+            LevelStruct level = DatabaseController.Instance.GetLevelData(levelid);
+            
         }
 
         public LevelDataModel[] GetLevelList()
@@ -21,7 +22,12 @@ namespace GameTrivia.Modul.Level {
 
         public void InitLevelList(LevelDataModel[] levels)
         {
+            
+        }
 
+        private void Awake()
+        {
+            LoadLevelList();
         }
     }
     

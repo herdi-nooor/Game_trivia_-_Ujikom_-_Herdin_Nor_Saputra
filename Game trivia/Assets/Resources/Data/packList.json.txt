@@ -1,6 +1,0 @@
-{
-	"PackA",
-	"PackB",
-	"PackC",
-	"PackD"
-}

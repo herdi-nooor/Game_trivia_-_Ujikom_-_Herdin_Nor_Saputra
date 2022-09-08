@@ -8,11 +8,25 @@ namespace GameTrivia.Modul.Pack
 {
     public class PackDataView : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI _packNameLebel;
-        [SerializeField] private TextMeshProUGUI _unlockCostLabel;
-        [SerializeField] private Button _selectButton;
-        [SerializeField] private Button _unlockButton;
-        [SerializeField] private Image completeImage;
+        private TextMeshProUGUI _packNameLabel;
+        private TextMeshProUGUI _unlockCostLabel;
+        private Button _selectButton;
+        private Button _unlockButton;
+        private Image completeImage;
+        private PackView view;
+
+
+        public void LoadButtonList(PackDataModel[] data)
+        {
+            GameObject buttonPack = Resources.Load<GameObject>(@"Prefabs/Button pack");
+            for (int i = 0; i < data.Length; i++)
+            {
+                GameObject obj = Instantiate(buttonPack, view.buttonWrap.transform);
+                Instantiate(_packNameLabel, obj.transform);
+                if (data[i].IsUnlocked) obj.transform.GetChild(i).gameObject.SetActive(false);
+                else obj.transform.GetChild(i).gameObject.SetActive(false);
+            }
+        }
     }
 
 }

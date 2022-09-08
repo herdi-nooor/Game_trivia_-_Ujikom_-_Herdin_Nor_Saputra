@@ -20,6 +20,7 @@ namespace GameTrivia.Modul.Global
                 DontDestroyOnLoad(gameObject);
             }
             else Destroy(gameObject);
+            Dataa();
         }
 
 
@@ -52,7 +53,7 @@ namespace GameTrivia.Modul.Global
         /// <summary>
         ///  dumydata
         /// </summary>
-        public List<LevelStruct> levels;
+        public List<LevelStruct> levels = new List<LevelStruct>();
         public enum packname { PackA, PackB, PackC, PackD, }
         public string[] question =
         {
@@ -82,9 +83,6 @@ namespace GameTrivia.Modul.Global
             string[] Choice;
             int Answer;
 
-            string pack;
-
-            int j = 0;
             for (int i = 0; i < 5; i++)
             {
                 LevelID = $"LevelA{i.ToString()}";
