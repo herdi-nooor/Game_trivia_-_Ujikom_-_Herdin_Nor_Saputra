@@ -32,7 +32,8 @@ namespace GameTrivia.Modul.Global
             {
                 //packlist[i] = Resources.Load<GameObject>(@"/Data/").name;
                 //packlist = JsonUtility.FromJson<List<string>>(path);
-            }*/
+            }
+            */
             string[] packList = { "PackA", "PackB" , "packC", "packD"};
             return packList;
         }
@@ -50,9 +51,9 @@ namespace GameTrivia.Modul.Global
         }
 
 
-        /// <summary>
-        ///  dumydata
-        /// </summary>
+        ///
+        ///  datadumy
+        ///
         public List<LevelStruct> levels = new List<LevelStruct>();
         public enum packname { PackA, PackB, PackC, PackD, }
         public string[] question =

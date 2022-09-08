@@ -37,7 +37,6 @@ namespace GameTrivia.Modul.Pack
 
         private void Start()
         {
-            _view = new PackDataView();
             LoadPackList();
         }
 

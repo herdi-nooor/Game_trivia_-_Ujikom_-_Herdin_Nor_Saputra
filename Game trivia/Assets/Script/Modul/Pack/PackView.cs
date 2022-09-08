@@ -9,7 +9,6 @@ namespace GameTrivia.Modul.Pack
     {
         [SerializeField]private Button _backButton;
         [SerializeField]public GameObject buttonWrap;
-        
     }
 
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace GameTrivia.Modul.Pack
 {
-    public class PackDataView : MonoBehaviour
+    public class PackDataView : PackView
     {
         private TextMeshProUGUI _packNameLabel;
         private TextMeshProUGUI _unlockCostLabel;
